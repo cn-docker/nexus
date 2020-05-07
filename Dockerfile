@@ -17,7 +17,6 @@ ENV PATH="$PATH:$GROOVY_HOME/bin:$GROOVY_HOME/lib"
 
 USER nexus
 
-COPY entrypoint.sh /tmp/entrypoint.sh
 COPY scripts /tmp/scripts
 
-ENTRYPOINT ["/tmp/entrypoint.sh"]
+ENTRYPOINT ["/tmp/scripts/entrypoint.sh"]

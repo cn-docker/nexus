@@ -11,3 +11,13 @@
 [![](https://img.shields.io/github/repo-size/cn-docker/nexus)](https://github.com/cn-docker/nexus)
 
 Docker image based on Sonatype Nexus official image.
+
+## Start Nexus ##
+
+Create a folder to store Nexus data files, so the container can be reseted without losing information.
+
+    mkdir ~/nexus_data
+
+Run the container
+
+    docker run -d --name nexus --restart=always -p 8081:8081 -v ~/nexus_data:/nexus-data cnservices/nexus
